@@ -1,0 +1,157 @@
+%-------------------------
+% Resume - Ishan Singh
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[hidelinks,
+  pdftitle={Ishan Singh - Resume},
+  pdfauthor={Ishan Singh},
+  pdfsubject={Backend / Platform Engineer},
+  pdfkeywords={Go, Python, Kubernetes, AWS, Kafka, IAM, distributed systems, microservices}
+]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{microtype}
+
+\linespread{1.08}\selectfont
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\urlstyle{same}
+
+% Better line wrapping
+\raggedright
+\setlength{\emergencystretch}{3em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Section styling
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\titlerule]
+
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% Lists
+\newenvironment{resumeList}{
+  \begin{itemize}[
+    leftmargin=0.22in,
+    label=\textbullet,
+    itemsep=2pt,
+    topsep=2.5pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
+}{
+  \end{itemize}
+  \vspace{0pt}
+}
+
+% Experience heading
+\newcommand{\resumeSubheading}[4]{
+  \vspace{3pt}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}
+  \vspace{-5pt}
+}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  {\LARGE \textbf{Ishan Singh}} \\[1pt]
+  \href{mailto:ishan.singh024@gmail.com}{ishan.singh024@gmail.com}
+  \textbar{} +91-9457710212
+  \textbar{} \href{https://linkedin.com/in/proishan11}{linkedin.com/in/proishan11}
+  \textbar{} \href{https://proishan11.github.io}{proishan11.github.io}
+\end{center}
+
+\vspace{-8pt}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+Backend / Platform Engineer with 5+ years of experience building distributed systems, multi-tenant SaaS platforms, IAM, real-time data pipelines, and Kubernetes-native backend services at scale.
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+\textbf{Languages:} Go, Python, Java, C/C++, SQL \\
+\textbf{Backend / Infra:} Kubernetes, AWS, Kafka, PostgreSQL, ClickHouse, REST, GraphQL \\
+\textbf{Security / Observability:} IAM, SSO (SAML, OIDC), Splunk, CloudWatch \\
+\textbf{AI / Infra:} AWS Bedrock, MCP, LLMs, LangChain, RAG, Qdrant, pgvector
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+\resumeSubheading
+  {Cisco}{Bengaluru, KA}
+  {Software Engineer}{Oct. 2024 -- Present}
+\begin{resumeList}
+  \item Built tenant-scale global search for Cisco Secure Access using Go, OpenSearch, DynamoDB, and Kafka, indexing 30+ security configuration object types across 50+ searchable fields and millions of cross-object relationships.
+  \item Enabled nested and where-used lookups to trace related objects, policies, and dependencies -- targeting 60\% lower policy-troubleshooting MTTR and 40\% fewer audit misconfigurations.
+  \item Designed anomaly schemas, RCA service APIs (Go), and deployment pipelines (Terraform, Kubernetes) for an internal root-cause analysis platform; shipped MCP servers in Python with Bedrock-powered agents.
+  \item Led implementation of a distributed firewall log ingestion and enrichment pipeline processing 10K events/sec using Go, Kafka, Kinesis, DynamoDB, and S3 with no upstream lag.
+\end{resumeList}
+
+\resumeSubheading
+  {Deepfactor, acquired by Cisco}{Bengaluru, KA}
+  {Senior Software Engineer}{Feb. 2023 -- Oct. 2024}
+\begin{resumeList}
+  \item Designed and built the IAM layer using Keycloak and Postgres for Deepfactor SaaS beta, supporting multi-tenant authentication and authorization across SaaS and on-prem deployments.
+  \item Implemented generic enterprise SSO support using SAML and OIDC, enabling customer-managed identity provider integrations.
+  \item Designed per-tenant rate limiting at the Kubernetes ingress layer using Istio and custom usage metrics from ClickHouse such as telemetry data ingested and containers observed.
+  \item Built team management and role-scoped access controls for secure multi-tenant collaboration.
+\end{resumeList}
+
+\resumeSubheading
+  {Amazon}{Bengaluru, KA}
+  {Software Development Engineer}{Jul. 2021 -- Jan. 2023}
+\begin{resumeList}
+  \item Led organization-wide platform migration automation in Java for 50+ teams, reducing a multi-day manual process to a minutes-long workflow.
+  \item Contributed to AIWorkbench (Java), a no-code workflow platform for composing chained workflows across AWS and internal services.
+  \item Built approval workflows that paused execution to validate intermediate ML inference results before continuing downstream processing.
+  \item Built a one-click campaign launcher in Python using ML inference outputs to recommend campaign configurations during large-scale marketplace events.
+\end{resumeList}
+
+\resumeSubheading
+  {Optum, UnitedHealth Group}{Remote}
+  {Software Engineer}{Aug. 2020 -- Jun. 2021}
+\begin{resumeList}
+  \item Built a service in Java to validate Kafka streams against source databases and generate automated data quality reports.
+  \item Migrated legacy services from Java to Go and added observability using Prometheus, Grafana, and Jaeger.
+\end{resumeList}
+
+\resumeSubheading
+  {Mindship}{Bengaluru, KA}
+  {Software Engineer Intern}{Jun. 2019 -- Sep. 2019}
+\begin{resumeList}
+  \item Built reusable backend services in Go including a GraphQL-based web chat service and messaging integrations with Twilio and SendGrid.
+\end{resumeList}
+
+\newpage
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\textbf{\href{https://github.com/proishan11/open-agent-policy}{Open Agent Policy}}: Zero-trust access control framework for AI agents with a Python SDK and a policy engine written in Go. \\[2pt]
+\textbf{\href{https://github.com/proishan11/gowal}{Distributed WAL}}: Disk-backed distributed write-ahead log in Go with Raft-based replication, leader election, and fault-tolerant recovery. \\[2pt]
+\textbf{Lox Interpreter}: Tree-walking interpreter for the Lox language in Go, featuring lexical analysis, recursive-descent parsing, and AST evaluation. \\[2pt]
+\textbf{\href{https://github.com/proishan11/VirtualStylus}{Virtual Stylus}}: Hand-gesture-driven drawing interface built in Python with real-time object detection and classification for touchless HCI.
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubheading
+  {Zakir Husain College of Engineering \& Technology, AMU}{Aligarh, UP}
+  {Bachelor of Computer Engineering; GPA: 9.12/10}{Aug. 2016 -- May 2020}
+
+%-------------------------------------------
+\end{document}
