@@ -97,54 +97,56 @@ Backend / Platform Engineer with 6+ years of experience building distributed sys
   {Cisco}{Bengaluru, KA}
   {Software Engineer}{Oct. 2024 -- Present}
 \begin{resumeList}
-  \item Built tenant-scale global search for Cisco Secure Access using Go, OpenSearch, DynamoDB, and Kafka, indexing 30+ security configuration object types across 50+ searchable fields and millions of cross-object relationships.
-  \item Enabled nested and where-used lookups to trace related objects, policies, and dependencies -- targeting 60\% lower policy-troubleshooting MTTR and 40\% fewer audit misconfigurations.
-  \item Designed anomaly schemas, RCA service APIs (Go), and deployment pipelines (Terraform, Kubernetes) for an internal root-cause analysis platform; shipped MCP servers in Python with Bedrock-powered agents.
-  \item Led implementation of a distributed firewall log ingestion and enrichment pipeline processing 10K events/sec using Go, Kafka, Kinesis, DynamoDB, and S3 with no upstream lag.
+  \item Designed and built \textbf{tenant-scale global search} for Cisco Secure Access using Go, OpenSearch, DynamoDB, and Kafka, indexing 30+ security configuration object types across 50+ searchable fields and millions of cross-object relationships.
+  \item Enabled nested and where-used lookups to trace related objects, policies, and dependencies -- targeting \textbf{60\% lower policy-troubleshooting MTTR} and \textbf{40\% fewer audit misconfigurations}.
+  \item Designed anomaly schemas, RCA service APIs (Go), and deployment pipelines (Terraform, Kubernetes) for an internal \textbf{root-cause analysis platform}; shipped MCP servers in Python with Bedrock-powered agents.
+  \item Led implementation of a distributed firewall log ingestion and enrichment pipeline processing \textbf{10K events/sec} using Go, Kafka, Kinesis, DynamoDB, and S3 with no upstream lag.
 \end{resumeList}
 
 \resumeSubheading
   {Deepfactor, acquired by Cisco}{Bengaluru, KA}
   {Senior Software Engineer}{Feb. 2023 -- Oct. 2024}
 \begin{resumeList}
-  \item Designed and built the IAM layer using Keycloak and Postgres for Deepfactor SaaS beta, supporting multi-tenant authentication and authorization across SaaS and on-prem deployments.
-  \item Implemented generic enterprise SSO support using SAML and OIDC, enabling customer-managed identity provider integrations.
-  \item Designed per-tenant rate limiting at the Kubernetes ingress layer using Istio and custom usage metrics from ClickHouse such as telemetry data ingested and containers observed.
-  \item Built team management and role-scoped access controls for secure multi-tenant collaboration.
+  \item Designed and built the \textbf{IAM layer} using Keycloak and Postgres for Deepfactor SaaS beta, supporting multi-tenant authentication and authorization across SaaS and on-prem deployments.
+  \item Implemented generic \textbf{enterprise SSO} support using SAML and OIDC, enabling customer-managed identity provider integrations.
+  \item Built a \textbf{rate-limiting control plane} that read tenant usage from ClickHouse and applied Istio configuration for per-tenant enforcement.
+  \item Built team management and \textbf{role-scoped access controls} for secure multi-tenant collaboration.
+  % \item Worked on telemetry collectors written in \textbf{C} and Go runtime instrumentation support for capturing low-level runtime signals from customer workloads.
 \end{resumeList}
 
 \resumeSubheading
   {Amazon}{Bengaluru, KA}
   {Software Development Engineer}{Jul. 2021 -- Jan. 2023}
 \begin{resumeList}
-  \item Led organization-wide platform migration automation in Java for 50+ teams, reducing a multi-day manual process to a minutes-long workflow.
-  \item Contributed to AIWorkbench (Java), a no-code workflow platform for composing chained workflows across AWS and internal services.
-  \item Built approval workflows that paused execution to validate intermediate ML inference results before continuing downstream processing.
-  \item Built a one-click campaign launcher in Python using ML inference outputs to recommend campaign configurations during large-scale marketplace events.
+  \item Led organization-wide \textbf{platform migration automation} in Java for \textbf{50+ teams}, reducing a multi-day manual process to a minutes-long workflow.
+  \item Contributed to \textbf{AIWorkbench} (Java), a no-code workflow platform for composing chained workflows across AWS and internal services.
+  \item Designed and implemented \textbf{approval workflows} using AWS Lambda and Step Functions to pause execution, validate intermediate ML inference results, and resume downstream processing.
+  \item Built a \textbf{one-click campaign launcher} in Python using ML inference outputs to recommend campaign configurations during large-scale marketplace events.
+  \item Diligently handled \textbf{production on-call} duties, triaging and resolving customer-impacting issues while improving \textbf{runbooks and operational documentation}.
+  \item Raised engineering standards through \textbf{peer code reviews}, service documentation, and \textbf{mentoring new hires} through onboarding and service ownership.
 \end{resumeList}
 
 \resumeSubheading
   {Optum, UnitedHealth Group}{Remote}
   {Software Engineer}{Aug. 2020 -- Jun. 2021}
 \begin{resumeList}
-  \item Built a service in Java to validate Kafka streams against source databases and generate automated data quality reports.
-  \item Migrated legacy services from Java to Go and added observability using Prometheus, Grafana, and Jaeger.
+  \item Built a service in Java to validate \textbf{Kafka streams} against source databases and generate automated data quality reports.
+  \item Migrated legacy services from \textbf{Java to Go} and added observability using Prometheus, Grafana, and Jaeger.
 \end{resumeList}
 
 \resumeSubheading
   {Mindship}{Bengaluru, KA}
   {Software Engineer Intern}{Jun. 2019 -- Sep. 2019}
 \begin{resumeList}
-  \item Built reusable backend services in Go including a GraphQL-based web chat service and messaging integrations with Twilio and SendGrid.
+  \item Built \textbf{reusable backend services} in Go including a GraphQL-based web chat service and messaging integrations with Twilio and SendGrid.
 \end{resumeList}
-
-\newpage
 
 %-----------PROJECTS-----------------
 \section{Projects}
+\textbf{\href{https://github.com/proishan11/build-your-own-systems}{Build Your Own Systems}}: Portable AI coaching skill and systems curriculum with 365 runnable exercises across core CS and infrastructure topics. \\[2pt]
 \textbf{\href{https://github.com/proishan11/open-agent-policy}{Open Agent Policy}}: Zero-trust access control framework for AI agents with a Python SDK and a policy engine written in Go. \\[2pt]
 \textbf{\href{https://github.com/proishan11/gowal}{Distributed WAL}}: Disk-backed distributed write-ahead log in Go with Raft-based replication, leader election, and fault-tolerant recovery. \\[2pt]
-\textbf{Lox Interpreter}: Tree-walking interpreter for the Lox language in Go, featuring lexical analysis, recursive-descent parsing, and AST evaluation. \\[2pt]
+\textbf{Lox Interpreter / C++ VM}: Tree-walking interpreter in Go and bytecode virtual machine in C++, featuring lexical analysis, recursive-descent parsing, and stack-based execution. \\[2pt]
 \textbf{\href{https://github.com/proishan11/VirtualStylus}{Virtual Stylus}}: Hand-gesture-driven drawing interface built in Python with real-time object detection and classification for touchless HCI.
 
 %-----------EDUCATION-----------------
